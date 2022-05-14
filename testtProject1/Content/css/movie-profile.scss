@@ -1,0 +1,80 @@
+.movie-profile{
+    .movie-profile__caption{
+        color: white;
+        margin-top: 30px;
+        h4{
+            font-weight: bold;
+        }img:hover{
+            opacity: .6;
+            cursor: pointer;
+        }p{
+            max-width: 81%;
+        }
+    }
+}
+.actors{
+    h4{
+        color: white;
+        font-weight: bold;
+        border-left: 7px solid white;
+        padding: 7px;
+        margin: 10px 0 20px 10px;
+    }img:hover{
+        opacity: .6;
+    }p{
+        position: absolute;
+        color: white;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -200%);
+        background-color: black;
+        opacity: 0.8;
+        width: 81%;
+    }
+}
+.comment{
+    margin-top: 20%;
+    .comment__box{
+        height: 100px;color: white;
+        background-color: black;
+        border: 1px solid #323232;
+    }button{
+        color: white; 
+        background-color: black; 
+        width: 100%;
+    }.comment__comments{
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        
+    }
+}
+
+#like__button:hover{
+    color: blue;
+    cursor: pointer;
+}
+#dislike__button:hover{
+    color: blue;
+    cursor: pointer;
+}
+.like__button{
+    color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

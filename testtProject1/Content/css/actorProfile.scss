@@ -1,0 +1,11 @@
+.actor-card{
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 4% 0% 2% 2%;
+    color: white;
+    .films{
+        img:hover{
+            opacity: .5;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7b29fa4a3d7e4cca8f3105478de33f7e" Name="Diagram1">
+        <EntityTypeShape EntityType="IDMBDataBaseModel.Actorr" Width="1.5" PointX="1.5" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IDMBDataBaseModel.Directorr" Width="1.5" PointX="5.375" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IDMBDataBaseModel.favourite_actorr" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IDMBDataBaseModel.favourite_directorr" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IDMBDataBaseModel.favourite_moviee" Width="1.5" PointX="3.625" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IDMBDataBaseModel.Like_or_dislike_moviee" Width="1.5" PointX="6" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IDMBDataBaseModel.Moviee" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="IDMBDataBaseModel.Table" Width="1.5" PointX="6.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IDMBDataBaseModel.Userr" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="IDMBDataBaseModel.FK_favourite_actorr_Actorr" ManuallyRouted="false" />
+        <AssociationConnector Association="IDMBDataBaseModel.FK_favourite_actorr_Userr" ManuallyRouted="false" />
+        <AssociationConnector Association="IDMBDataBaseModel.FK_favourite_dirictorr_Userr" ManuallyRouted="false" />
+        <AssociationConnector Association="IDMBDataBaseModel.FK_favourite_moviee_Moviee" ManuallyRouted="false" />
+        <AssociationConnector Association="IDMBDataBaseModel.FK_favourite_moviee_Userr" ManuallyRouted="false" />
+        <AssociationConnector Association="IDMBDataBaseModel.FK_Like_or_dislike_moviee_Moviee" ManuallyRouted="false" />
+        <AssociationConnector Association="IDMBDataBaseModel.FK_Like_or_dislike_moviee_Userr" ManuallyRouted="false" />
+        <AssociationConnector Association="IDMBDataBaseModel.Actor_in_moviee" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="IDMBDataBaseModel.Adminn1" Width="1.5" PointX="8.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

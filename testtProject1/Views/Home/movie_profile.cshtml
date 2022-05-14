@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IMDB</title>
+
+    <!--Vendor Css File-->
+    <link rel="stylesheet" href="../content/css/vendor/all.min.css">
+    <link rel="stylesheet" href="../content/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../content/css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="../content/css/vendor/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../content/assets/font awesome/fontawesome-free-5.15.3-web/css/all.min.css">
+
+    <!-- Main Css File-->
+    <link rel="stylesheet" href="../content/css/style_ltr.css">
+    <link rel="stylesheet" href="../content/css/movie-profile.css">
+</head>
+<body style="background-color:black;">
+    <main>
+        <div class="container movie-profile">
+            <div class="row">
+                <div class="col-md-9 movie-profile__video">
+                    <video src="../content/assests/videos/Peaky Blinders Series 6 Trailer 🔥 BBC.mp4" width="100%" controls>your brawser dosn't support the video tag</video>
+                </div>
+                <div class="col-md-3 movie-profile__caption">
+                    <h4>Peaky Blinders</h4>
+                    <img src="../content/assests/imgs/Peaky-Blinders.jpg" width="80%">
+                    <p>A gangster family epic set in 1900s England, centering on a gang who sew razor blades in the peaks of their caps, and their fierce boss Tommy Shelby.</p>
+                    <i onclick="myFunction(this)" id="like__button" class="fa fa-thumbs-up"></i>&nbsp; like&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i onclick="myFunction2(this)" id="dislike__button" class="fa fa-thumbs-down"></i>&nbsp;dis like
+                </div>
+            </div>
+        </div>
+        <div class="container actors">
+            <div class="row">
+                <h4>Top cast</h4>
+                <div class="col-md-3" style="position: relative;">
+                    <a href="@Url.Action("actorProfile","Home")"><img src="../content/assests/imgs/New folder/tommy2.jpg" width="100%" height="400px"></a>
+                    <p>Cillian Morphy <span style="color:#9b9d9e;">as thomas shelby</span></p>
+                </div>
+                <div class="col-md-3" style="position: relative;">
+                    <a href="#"><img src="../content/assests/imgs/New folder/aurther.jpg" width="100%" height="400px"></a>
+                    <p>Paul Anderson <span style="color:#9b9d9e;">as arther shelby</span></p>
+                </div>
+                <div class="col-md-3" style="position: relative;">
+                    <a href="#"><img src="../content/assests/imgs/New folder/grais.jpg" width="100%" height="400px"></a>
+                    <p>Annabelle Wallis <span style="color:#9b9d9e;">as grace burgess</span></p>
+                </div>
+                <div class="col-md-3" style="position: relative;">
+                    <a href="#"><img src="../content/assests/imgs/New folder/polly.jpg" width="100%" height="400px"></a><br><br>
+                    <p>Helen McCrory<span style="color:#9b9d9e;"> as polly gray</span></p>
+                </div>
+
+                <div class="col-md-3" style="position: relative;">
+                    <a href="#"><img src="../content/assests/imgs/New folder/tomhardy.jpg" width="100%" height="400px"></a>
+                    <p>Tom Hardy <span style="color:#9b9d9e;">as alfie solomons</span></p>
+                </div>
+                <div class="col-md-3" style="position: relative;">
+                    <a href="#"><img src="../content/assests/imgs/New folder/lezy.jpg" width="100%" height="400px"></a>
+                    <p>Natasha O'Keefe <span style="color:#9b9d9e;">as lizzie stark</span></p>
+                </div>
+                <div class="col-md-3" style="position: relative;">
+                    <a href="#"><img src="../content/assests/imgs/New folder/john.jpg" width="100%" height="400px"></a>
+                    <p>Fenn cole <span style="color:#9b9d9e;">as michael gray</span></p>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="container actors">
+            <div class="row">
+                <h4>Director</h4>
+                <div class="col-md-3" style="position: relative;">
+                    <a href="@Url.Action("directorProfile" , "Home")"><img src="../content/assests/imgs/New folder/stevenNight.jpg" width="100%" height="400px"></a>
+                    <p>Steven Night <span style="color:#9b9d9e;">as the director</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="container comment">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <textarea class="form-control comment__box" placeholder="Leave a comment here" id="floatingTextarea2">Your Comment</textarea>
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+                <div class="col-md-6 comment__comments">
+                    <img src="../content/assests/imgs/New folder/tommy3.jpg">&nbsp; it was an amzing movie
+                    <img src="../content/assests/imgs/New folder/tommy3.jpg">&nbsp; acceptable
+                    <div class="col-md-6 comment__comments" style="margin-top: 30px;">
+                        <img src="../content/assests/imgs/New folder/tommy3.jpg">&nbsp; it was a very bad movie
+                        <img src="../content/assests/imgs/New folder/tommy3.jpg">&nbsp;ok
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+   
+    <!-- Vendor JS Files -->
+    <script src="../content/js/vendor/all.min.js"></script>
+    <script src="../content/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="../content/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="../content/js/vendor/owl.carousel.min.js"></script>
+    <script src="../content/assets/font awesome/fontawesome-free-5.15.3-web/js/all.min.js"></script>
+
+    <!--Main js Fiels-->
+    <script src="../content/js/owl.js"></script>
+    <script src="../content/js/like-button.js"></script>
+
+</body>
+
+</html>

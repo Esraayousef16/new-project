@@ -1,0 +1,93 @@
+.lorem {
+  margin: 50% 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Montserrat",sans-serif;
+  font-size: bold;
+  scroll-behavior: smooth; }
+
+a:hover, a:active {
+  color: white; }
+
+nav .nav_search {
+  width: 50%; }
+  nav .nav_search .nav_search_btn:hover {
+    background-color: gray; }
+nav .nav_lg {
+  width: 35%;
+  border: none; }
+nav .nav_lg:hover {
+  cursor: pointer; }
+
+main {
+  background-color: black; }
+  main .header {
+    background-color: black; }
+  main .best-movies {
+    background-color: black;
+    margin: 50px 0px 0px 0px; }
+    main .best-movies .best-movies__header h3 {
+      font-weight: bold;
+      color: #7fffd4;
+      margin-bottom: 30px; }
+    main .best-movies .best-movies__header h4 {
+      color: white;
+      font-weight: bold;
+      border-left: 6px solid #7fffd4;
+      padding-left: 10px; }
+    main .best-movies .best-movies__header p {
+      color: #8a8a8a; }
+    main .best-movies .card {
+      border: none; }
+    main .best-movies .card-body {
+      background-color: #1a1a1a;
+      color: white; }
+      main .best-movies .card-body a:link, main .best-movies .card-body a:visited {
+        text-decoration: none;
+        color: white;
+        padding: 7px; }
+      main .best-movies .card-body a:hover, main .best-movies .card-body a:active {
+        background-color: #2b2b2b;
+        color: white;
+        border-radius: 5px; }
+    main .best-movies .owl-nav {
+      color: white; }
+      main .best-movies .owl-nav .owl-prev {
+        width: 48%; }
+      main .best-movies .owl-nav .owl-prev:hover {
+        background-color: #202020; }
+      main .best-movies .owl-nav .owl-next {
+        width: 48%; }
+      main .best-movies .owl-nav .owl-next:hover {
+        background-color: #202020; }
+
+footer {
+  background-color: black;
+  color: white; }
+  footer .footer__logo {
+    display: flex;
+    justify-content: center; }
+  footer .footer__word {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: -2% 0px 24px 0px; }
+  footer .footer__icons {
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px 6px 0px; }
+    footer .footer__icons a {
+      color: white;
+      border-radius: 50%;
+      padding: 16px 20px; }
+    footer .footer__icons a:hover, footer .footer__icons a:active {
+      background-color: #3f3e3e; }
+  footer .footer__copyright {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px; }
+
+/*# sourceMappingURL=style_ltr.css.map */

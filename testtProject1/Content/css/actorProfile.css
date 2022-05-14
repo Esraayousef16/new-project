@@ -1,0 +1,9 @@
+.actor-card {
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 4% 0% 2% 2%;
+  color: white; }
+  .actor-card .films img:hover {
+    opacity: .5; }
+
+/*# sourceMappingURL=actorProfile.css.map */

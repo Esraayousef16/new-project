@@ -1,0 +1,138 @@
+﻿@using testtProject1.Models
+@model Userr
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDB</title>
+    <!--Vendor Css File-->
+    <link rel="stylesheet" href="../content/css/vendor/all.min.css">
+    <link rel="stylesheet" href="../content/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../content/css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="../content/css/vendor/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../content/assets/font awesome/fontawesome-free-5.15.3-web/css/all.min.css">
+    <!-- Main Css File-->
+    <link rel="stylesheet" href="../content/css/style_ltr.css">
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="IMDB.html">IMDB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Link
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Link</a>
+                    </li>
+                </ul>
+                <div class="input-group me-3 nav_search">
+                    <input type="text" class="form-control" placeholder="search" aria-label="search" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                </div>
+                <form class="d-flex">
+                    <button class="btn btn-outline-primary me-2" type="button" id="button-addon2"><a href="@Url.Action("logIn","Home")" style="text-decoration: none;">Sign In</a></button>
+                    <select class="form-select form-select-sm me-2 bg-dark text-secondary nav_lg" aria-label=".form-select-sm example">
+                        <option selected>en</option>
+                        <option value="1">Arabic</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="col-md-12">
+            <div class="create-acc" style="justify-content: center; display: flex; background-color: white;">
+                <form asp-action="new_acc" method="post" style="border: 1px solid #0d6efd;padding: 5%;margin: 5% 0px 5% 0px;border-radius: 5%;">
+                    <div class="create-acc__word"><h4>Create account</h4></div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">First Name</label>
+                        <input type="text" value ="@ViewBag.fn" name="First_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                        <input type="text" value ="@ViewBag.ln"name="Last_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">image</label>
+                        <input type="text" value ="@ViewBag.img"name ="profile_picture" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" value ="@ViewBag.email" name ="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" value ="@ViewBag.pass" name ="password" class="form-control" id="exampleInputPassword1">
+                        <div id="emailHelp" class="form-text">Passwords must be at least 8 characters.</div>
+                    </div>
+                    <!--
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Re-enter Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+    </div> -->
+                    <button type="submit" class="btn btn-primary" style="width:100%;">Create your IMDB account</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid footer">
+            <div class="col-md-12 footer__logo"><img src="../content/assests/imgs/logo1.png" alt="" srcset=""></div>
+            <div class="col-md-12 footer__word">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam facere commodi adipisci est sint sequi itaque quas a possimus doloribus!</div>
+            <div class="col-md-12 footer__icons">
+                <a href="">
+                    <!-- Facebook -->
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="">
+                    <!-- Twitter -->
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="">
+                    <!-- Google -->
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="">
+                    <!-- Instagram -->
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="">
+                    <!-- Linkedin -->
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            <div class="col-md-12 footer__copyright" style="border-top: 1px solid #222222;">
+                <p style="margin: 0px;">© Copyright IMDB. All Rights Reserved </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Vendor JS Files -->
+    <script src="../content/js/vendor/all.min.js"></script>
+    <script src="../content/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="../content/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="../content/js/vendor/owl.carousel.min.js"></script>
+    <script src="../content/assets/font awesome/fontawesome-free-5.15.3-web/js/all.min.js"></script>
+</body>
+</html>

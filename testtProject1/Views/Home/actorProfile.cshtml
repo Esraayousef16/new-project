@@ -1,0 +1,149 @@
+﻿@using testtProject1.Models
+@model Actorr
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IMDB</title>
+
+    <!--Vendor Css File-->
+    <link rel="stylesheet" href="../content/css/vendor/all.min.css">
+    <link rel="stylesheet" href="../content/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../content/css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="../content/css/vendor/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../content/assets/font awesome/fontawesome-free-5.15.3-web/css/all.min.css">
+
+    <!-- Main Css File-->
+    <link rel="stylesheet" href="../content/css/style_ltr.css">
+    <link rel="stylesheet" href="../content/css/actorProfile.css">
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="IMDB.html">IMDB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Link
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Link</a>
+                    </li>
+                </ul>
+                <div class="input-group me-3 nav_search">
+                    <input type="text" class="form-control" placeholder="search" aria-label="search" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                </div>
+                <form class="d-flex">
+                    <button class="btn btn-outline-primary me-2" type="button" id="button-addon2"><a href="@Url.Action("logIn","Home")" style="text-decoration: none;">Sign In</a></button>
+                    <select class="form-select form-select-sm me-2 bg-dark text-secondary nav_lg" aria-label=".form-select-sm example">
+                        <option selected>en</option>
+                        <option value="1">Arabic</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container actor-card">
+            <div class="row">
+                <div class="col-md-3">
+                    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../content/assests/imgs/New folder/tommy3.jpg" width="111%">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../content/assests/imgs/New folder/tommy.jpg" width="111%">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="@Model.image" width="100%">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-3"> <br> <br> <br>First Name : @Model.First_name<br> <br>Last Name :@Model.Last_name <br> <br>Age : @Model.age</div>
+                <div class="col-md-3 films">
+                    <a href="#"><img src="../content/assests/imgs/anthropoid.jpg" style="margin-bottom: 5px;" width="150px" height="160px"></a>
+                    <a href="#"><img src="../content/assests/imgs/dunkirk.jpg" width="150px" height="160px"></a>
+                </div>
+                <div class="col-md-3 films">
+                    <a href="movie-profile.html"><img src="../content/assests/imgs/Peaky-Blinders.jpg" style="margin-bottom: 5px;" width="150px" height="160px"></a>
+                    <a href="#"><img src="../content/assests/imgs/extraction.jpg" width="150px" height="160px"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid footer">
+            <div class="col-md-12 footer__logo"><img src="../content/assests/imgs/logo1.png" alt="" srcset=""></div>
+            <div class="col-md-12 footer__word">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam facere commodi adipisci est sint sequi itaque quas a possimus doloribus!</div>
+            <div class="col-md-12 footer__icons">
+                <a href="">
+                    <!-- Facebook -->
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="">
+                    <!-- Twitter -->
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="">
+                    <!-- Google -->
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="">
+                    <!-- Instagram -->
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="">
+                    <!-- Linkedin -->
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            <div class="col-md-12 footer__copyright" style="border-top: 1px solid #222222;">
+                <p style="margin: 0px;">© Copyright IMDB. All Rights Reserved </p>
+            </div>
+    </footer>
+    <!-- Vendor JS Files -->
+    <script src="../content/js/vendor/all.min.js"></script>
+    <script src="../content/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="../content/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="../content/js/vendor/owl.carousel.min.js"></script>
+    <script src="../content/assets/font awesome/fontawesome-free-5.15.3-web/js/all.min.js"></script>
+
+    <!--Main js Fiels-->
+    <script src="../content/js/owl.js"></script>
+
+</body>
+
+</html>

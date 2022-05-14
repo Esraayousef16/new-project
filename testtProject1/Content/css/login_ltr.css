@@ -1,0 +1,23 @@
+.login__page {
+  background-color: #a3a3a3;
+  display: flex;
+  justify-content: center; }
+  .login__page .login__page--left {
+    background-color: white;
+    margin: 5% 0px;
+    padding: 5%;
+    border-right: 1px solid black; }
+    .login__page .login__page--left .big_left {
+      border: 1px solid #0b5ed7;
+      padding: 7% 5%;
+      border-radius: 5%; }
+      .login__page .login__page--left .big_left .sign__word {
+        color: #0b5ed7;
+        display: flex;
+        justify-content: center; }
+  .login__page .login__page--right {
+    background-color: white;
+    margin: 5% 0px;
+    padding: 5%; }
+
+/*# sourceMappingURL=login_ltr.css.map */

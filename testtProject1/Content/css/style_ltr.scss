@@ -1,0 +1,116 @@
+.lorem{
+    margin: 50% 0;
+}
+*{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: "Montserrat",sans-serif;
+        font-size: bold;
+        scroll-behavior: smooth;
+    }
+    a:hover,a:active{
+        color: white;
+    }
+nav{
+    .nav_search{
+        width: 50%;
+        .nav_search_btn:hover{
+            background-color: gray;
+        }
+    }
+    .nav_lg{
+        width: 35%;
+        border: none;
+    }
+    .nav_lg:hover{
+        cursor: pointer;
+    }
+}
+main{
+    background-color: black;
+    .header{
+        background-color: black;
+    }
+    .best-movies{
+        .best-movies__header{
+            h3{
+                font-weight: bold;
+                color:#7fffd4 ;
+                margin-bottom: 30px;
+            }h4{
+                color: white;
+                font-weight: bold;
+                border-left: 6px solid #7fffd4;
+                padding-left: 10px;
+            }p{
+                color: rgb(138, 138, 138);
+            }
+        }
+        background-color: black;
+        margin: 50px 0px 0px 0px;
+        .card{
+            border: none;
+        }
+        .card-body{
+            background-color: #1a1a1a;
+            color: white;
+            a:link,a:visited{
+                text-decoration: none;
+                color: white;
+                padding: 7px;
+            }
+            a:hover,a:active{
+                background-color: #2b2b2b;
+                color: white;
+                border-radius: 5px;
+            }
+        }
+        .owl-nav{
+            color: white;
+            .owl-prev{
+                width: 48%;
+            }.owl-prev:hover{
+                background-color: #202020;
+            }
+
+            .owl-next{
+                width: 48%;
+            }.owl-next:hover{
+                background-color: #202020;
+                
+            }
+        }
+    }
+}
+footer{
+    background-color: black;
+    color: white;
+    .footer__logo{
+        display: flex;
+        justify-content: center;
+    }
+    .footer__word{
+        color: white;
+        display: flex;
+        justify-content: center;
+        margin: -2% 0px 24px 0px;
+    }
+    .footer__icons{
+        display: flex;
+        justify-content: center;
+        padding: 0px 0px 6px 0px;
+        a{
+            color: white;
+            border-radius: 50%;
+            padding: 16px 20px;
+        }a:hover,a:active{
+            background-color: rgb(63, 62, 62);
+        }
+    }
+    .footer__copyright{
+        display: flex;
+        justify-content: center;
+        padding: 20px 0px;
+    }
+}

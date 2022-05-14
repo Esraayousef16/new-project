@@ -1,0 +1,26 @@
+.login__page{
+    background-color: rgb(163, 163, 163);
+    display: flex;
+    justify-content: center;
+    .login__page--left{
+        background-color: white;
+        margin: 5% 0px;
+        padding: 5%;
+        border-right: 1px solid black;
+        .big_left{
+            border: 1px solid #0b5ed7;
+            padding: 7% 5%;
+            border-radius: 5%;
+            .sign__word{
+                color: #0b5ed7;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    .login__page--right{
+        background-color: white;
+        margin: 5% 0px;
+        padding: 5%;
+    }
+}
