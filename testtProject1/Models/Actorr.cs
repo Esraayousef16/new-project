@@ -17,8 +17,8 @@ namespace testtProject1.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Actorr()
         {
+            this.Actor_in_moviee = new HashSet<Actor_in_moviee>();
             this.favourite_actorr = new HashSet<favourite_actorr>();
-            this.Moviees = new HashSet<Moviee>();
         }
     
         public int id { get; set; }
@@ -28,8 +28,8 @@ namespace testtProject1.Models
         public Nullable<int> age { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<favourite_actorr> favourite_actorr { get; set; }
+        public virtual ICollection<Actor_in_moviee> Actor_in_moviee { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Moviee> Moviees { get; set; }
+        public virtual ICollection<favourite_actorr> favourite_actorr { get; set; }
     }
 }

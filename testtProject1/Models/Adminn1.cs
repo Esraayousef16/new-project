@@ -17,5 +17,6 @@ namespace testtProject1.Models
         public string Name { get; set; }
         public string Email { get; set; }
         public string passward { get; set; }
+        public string id { get; set; }
     }
 }

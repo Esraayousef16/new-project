@@ -17,9 +17,9 @@ namespace testtProject1.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Moviee()
         {
+            this.Actor_in_moviee = new HashSet<Actor_in_moviee>();
             this.favourite_moviee = new HashSet<favourite_moviee>();
             this.Like_or_dislike_moviee = new HashSet<Like_or_dislike_moviee>();
-            this.Actorrs = new HashSet<Actorr>();
         }
     
         public int id { get; set; }
@@ -29,10 +29,11 @@ namespace testtProject1.Models
         public int Director { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Actor_in_moviee> Actor_in_moviee { get; set; }
+        public virtual Directorr Directorr { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<favourite_moviee> favourite_moviee { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Like_or_dislike_moviee> Like_or_dislike_moviee { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Actorr> Actorrs { get; set; }
     }
 }

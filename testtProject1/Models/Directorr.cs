@@ -14,10 +14,19 @@ namespace testtProject1.Models
     
     public partial class Directorr
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Directorr()
+        {
+            this.Moviees = new HashSet<Moviee>();
+        }
+    
         public int id { get; set; }
         public string First_name { get; set; }
         public string Last_name { get; set; }
         public Nullable<int> age { get; set; }
         public string image { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Moviee> Moviees { get; set; }
     }
 }

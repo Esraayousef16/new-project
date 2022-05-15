@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IDMBDataBaseModelStoreContainer" CdmEntityContainer="IDMBDataBaseEntities2">
+    <EntitySetMapping Name="Actor_in_moviee">
+      <EntityTypeMapping TypeName="IDMBDataBaseModel.Actor_in_moviee">
+        <MappingFragment StoreEntitySet="Actor_in_moviee">
+          <ScalarProperty Name="Actor" ColumnName="Actor" />
+          <ScalarProperty Name="Movie" ColumnName="Movie" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Actorrs">
+      <EntityTypeMapping TypeName="IDMBDataBaseModel.Actorr">
+        <MappingFragment StoreEntitySet="Actorr">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="First_name" ColumnName="First_name" />
+          <ScalarProperty Name="Last_name" ColumnName="Last_name" />
+          <ScalarProperty Name="age" ColumnName="age" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Adminn1">
+      <EntityTypeMapping TypeName="IDMBDataBaseModel.Adminn1">
+        <MappingFragment StoreEntitySet="Adminn1">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="passward" ColumnName="passward" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Directorrs">
+      <EntityTypeMapping TypeName="IDMBDataBaseModel.Directorr">
+        <MappingFragment StoreEntitySet="Directorr">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="First_name" ColumnName="First_name" />
+          <ScalarProperty Name="Last_name" ColumnName="Last_name" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="favourite_actorr">
+      <EntityTypeMapping TypeName="IDMBDataBaseModel.favourite_actorr">
+        <MappingFragment StoreEntitySet="favourite_actorr">
+          <ScalarProperty Name="use_id" ColumnName="use_id" />
+          <ScalarProperty Name="actor_id" ColumnName="actor_id" />
+          <ScalarProperty Name="IS_Favourie" ColumnName="IS_Favourie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="favourite_directorr">
+      <EntityTypeMapping TypeName="IDMBDataBaseModel.favourite_directorr">
+        <MappingFragment StoreEntitySet="favourite_directorr">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="dirictor_id" ColumnName="dirictor_id" />
+          <ScalarProperty Name="Is_favourite" ColumnName="Is_favourite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="favourite_moviee">
+      <EntityTypeMapping TypeName="IDMBDataBaseModel.favourite_moviee">
+        <MappingFragment StoreEntitySet="favourite_moviee">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="movie_id" ColumnName="movie_id" />
+          <ScalarProperty Name="Is_Favourite" ColumnName="Is_Favourite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Like_or_dislike_moviee">
+      <EntityTypeMapping TypeName="IDMBDataBaseModel.Like_or_dislike_moviee">
+        <MappingFragment StoreEntitySet="Like_or_dislike_moviee">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="movie_id" ColumnName="movie_id" />
+          <ScalarProperty Name="is_like" ColumnName="is_like" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Moviees">
+      <EntityTypeMapping TypeName="IDMBDataBaseModel.Moviee">
+        <MappingFragment StoreEntitySet="Moviee">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="discription" ColumnName="discription" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Userrs">
+      <EntityTypeMapping TypeName="IDMBDataBaseModel.Userr">
+        <MappingFragment StoreEntitySet="Userr">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="First_name" ColumnName="First_name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="profile_picture" ColumnName="profile_picture" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="confirmPass" ColumnName="confirmPass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

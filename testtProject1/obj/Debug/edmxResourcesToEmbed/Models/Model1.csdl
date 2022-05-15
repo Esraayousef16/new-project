@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IDMBDataBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Actor_in_moviee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Actor" Type="Int32" />
+    <Property Name="Movie" Type="Int32" />
+    <Property Name="id" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Actorr" Relationship="Self.FK_Actor_in_moviee_Actorr" FromRole="Actor_in_moviee" ToRole="Actorr" />
+    <NavigationProperty Name="Moviee" Relationship="Self.FK_Actor_in_moviee_Moviee" FromRole="Actor_in_moviee" ToRole="Moviee" />
+  </EntityType>
+  <EntityType Name="Actorr">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="First_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="age" Type="Int32" />
+    <NavigationProperty Name="Actor_in_moviee" Relationship="Self.FK_Actor_in_moviee_Actorr" FromRole="Actorr" ToRole="Actor_in_moviee" />
+    <NavigationProperty Name="favourite_actorr" Relationship="Self.FK_favourite_actorr_Actorr" FromRole="Actorr" ToRole="favourite_actorr" />
+  </EntityType>
+  <EntityType Name="Adminn1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="passward" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Directorr">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="First_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Moviees" Relationship="Self.FK_MOVIEE_DIRICTOR" FromRole="Directorr" ToRole="Moviee" />
+  </EntityType>
+  <EntityType Name="favourite_actorr">
+    <Key>
+      <PropertyRef Name="use_id" />
+      <PropertyRef Name="actor_id" />
+    </Key>
+    <Property Name="use_id" Type="Int32" Nullable="false" />
+    <Property Name="actor_id" Type="Int32" Nullable="false" />
+    <Property Name="IS_Favourie" Type="Int32" />
+    <NavigationProperty Name="Actorr" Relationship="Self.FK_favourite_actorr_Actorr" FromRole="favourite_actorr" ToRole="Actorr" />
+    <NavigationProperty Name="Userr" Relationship="Self.FK_favourite_actorr_Userr" FromRole="favourite_actorr" ToRole="Userr" />
+  </EntityType>
+  <EntityType Name="favourite_directorr">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="dirictor_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="dirictor_id" Type="Int32" Nullable="false" />
+    <Property Name="Is_favourite" Type="Int32" />
+    <NavigationProperty Name="Userr" Relationship="Self.FK_favourite_dirictorr_Userr" FromRole="favourite_directorr" ToRole="Userr" />
+  </EntityType>
+  <EntityType Name="favourite_moviee">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="movie_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="movie_id" Type="Int32" Nullable="false" />
+    <Property Name="Is_Favourite" Type="Int32" />
+    <NavigationProperty Name="Moviee" Relationship="Self.FK_favourite_moviee_Moviee" FromRole="favourite_moviee" ToRole="Moviee" />
+    <NavigationProperty Name="Userr" Relationship="Self.FK_favourite_moviee_Userr" FromRole="favourite_moviee" ToRole="Userr" />
+  </EntityType>
+  <EntityType Name="Like_or_dislike_moviee">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="movie_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="movie_id" Type="Int32" Nullable="false" />
+    <Property Name="is_like" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Moviee" Relationship="Self.FK_Like_or_dislike_moviee_Moviee" FromRole="Like_or_dislike_moviee" ToRole="Moviee" />
+    <NavigationProperty Name="Userr" Relationship="Self.FK_Like_or_dislike_moviee_Userr" FromRole="Like_or_dislike_moviee" ToRole="Userr" />
+  </EntityType>
+  <EntityType Name="Moviee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="discription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Director" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Actor_in_moviee" Relationship="Self.FK_Actor_in_moviee_Moviee" FromRole="Moviee" ToRole="Actor_in_moviee" />
+    <NavigationProperty Name="Directorr" Relationship="Self.FK_MOVIEE_DIRICTOR" FromRole="Moviee" ToRole="Directorr" />
+    <NavigationProperty Name="favourite_moviee" Relationship="Self.FK_favourite_moviee_Moviee" FromRole="Moviee" ToRole="favourite_moviee" />
+    <NavigationProperty Name="Like_or_dislike_moviee" Relationship="Self.FK_Like_or_dislike_moviee_Moviee" FromRole="Moviee" ToRole="Like_or_dislike_moviee" />
+  </EntityType>
+  <EntityType Name="Userr">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="First_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="profile_picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="confirmPass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="favourite_actorr" Relationship="Self.FK_favourite_actorr_Userr" FromRole="Userr" ToRole="favourite_actorr" />
+    <NavigationProperty Name="favourite_directorr" Relationship="Self.FK_favourite_dirictorr_Userr" FromRole="Userr" ToRole="favourite_directorr" />
+    <NavigationProperty Name="favourite_moviee" Relationship="Self.FK_favourite_moviee_Userr" FromRole="Userr" ToRole="favourite_moviee" />
+    <NavigationProperty Name="Like_or_dislike_moviee" Relationship="Self.FK_Like_or_dislike_moviee_Userr" FromRole="Userr" ToRole="Like_or_dislike_moviee" />
+  </EntityType>
+  <Association Name="FK_Actor_in_moviee_Actorr">
+    <End Role="Actorr" Type="Self.Actorr" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Actor_in_moviee" Type="Self.Actor_in_moviee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actorr">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Actor_in_moviee">
+        <PropertyRef Name="Actor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Actor_in_moviee_Moviee">
+    <End Role="Moviee" Type="Self.Moviee" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Actor_in_moviee" Type="Self.Actor_in_moviee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Moviee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Actor_in_moviee">
+        <PropertyRef Name="Movie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_favourite_actorr_Actorr">
+    <End Role="Actorr" Type="Self.Actorr" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="favourite_actorr" Type="Self.favourite_actorr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actorr">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="favourite_actorr">
+        <PropertyRef Name="actor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MOVIEE_DIRICTOR">
+    <End Role="Directorr" Type="Self.Directorr" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Moviee" Type="Self.Moviee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Directorr">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Moviee">
+        <PropertyRef Name="Director" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_favourite_actorr_Userr">
+    <End Role="Userr" Type="Self.Userr" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="favourite_actorr" Type="Self.favourite_actorr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Userr">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="favourite_actorr">
+        <PropertyRef Name="use_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_favourite_dirictorr_Userr">
+    <End Role="Userr" Type="Self.Userr" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="favourite_directorr" Type="Self.favourite_directorr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Userr">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="favourite_directorr">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_favourite_moviee_Moviee">
+    <End Role="Moviee" Type="Self.Moviee" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="favourite_moviee" Type="Self.favourite_moviee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Moviee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="favourite_moviee">
+        <PropertyRef Name="movie_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_favourite_moviee_Userr">
+    <End Role="Userr" Type="Self.Userr" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="favourite_moviee" Type="Self.favourite_moviee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Userr">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="favourite_moviee">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Like_or_dislike_moviee_Moviee">
+    <End Role="Moviee" Type="Self.Moviee" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Like_or_dislike_moviee" Type="Self.Like_or_dislike_moviee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Moviee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Like_or_dislike_moviee">
+        <PropertyRef Name="movie_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Like_or_dislike_moviee_Userr">
+    <End Role="Userr" Type="Self.Userr" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Like_or_dislike_moviee" Type="Self.Like_or_dislike_moviee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Userr">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Like_or_dislike_moviee">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="IDMBDataBaseEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Actor_in_moviee" EntityType="Self.Actor_in_moviee" />
+    <EntitySet Name="Actorrs" EntityType="Self.Actorr" />
+    <EntitySet Name="Adminn1" EntityType="Self.Adminn1" />
+    <EntitySet Name="Directorrs" EntityType="Self.Directorr" />
+    <EntitySet Name="favourite_actorr" EntityType="Self.favourite_actorr" />
+    <EntitySet Name="favourite_directorr" EntityType="Self.favourite_directorr" />
+    <EntitySet Name="favourite_moviee" EntityType="Self.favourite_moviee" />
+    <EntitySet Name="Like_or_dislike_moviee" EntityType="Self.Like_or_dislike_moviee" />
+    <EntitySet Name="Moviees" EntityType="Self.Moviee" />
+    <EntitySet Name="Userrs" EntityType="Self.Userr" />
+    <AssociationSet Name="FK_Actor_in_moviee_Actorr" Association="Self.FK_Actor_in_moviee_Actorr">
+      <End Role="Actorr" EntitySet="Actorrs" />
+      <End Role="Actor_in_moviee" EntitySet="Actor_in_moviee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Actor_in_moviee_Moviee" Association="Self.FK_Actor_in_moviee_Moviee">
+      <End Role="Moviee" EntitySet="Moviees" />
+      <End Role="Actor_in_moviee" EntitySet="Actor_in_moviee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_favourite_actorr_Actorr" Association="Self.FK_favourite_actorr_Actorr">
+      <End Role="Actorr" EntitySet="Actorrs" />
+      <End Role="favourite_actorr" EntitySet="favourite_actorr" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MOVIEE_DIRICTOR" Association="Self.FK_MOVIEE_DIRICTOR">
+      <End Role="Directorr" EntitySet="Directorrs" />
+      <End Role="Moviee" EntitySet="Moviees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_favourite_actorr_Userr" Association="Self.FK_favourite_actorr_Userr">
+      <End Role="Userr" EntitySet="Userrs" />
+      <End Role="favourite_actorr" EntitySet="favourite_actorr" />
+    </AssociationSet>
+    <AssociationSet Name="FK_favourite_dirictorr_Userr" Association="Self.FK_favourite_dirictorr_Userr">
+      <End Role="Userr" EntitySet="Userrs" />
+      <End Role="favourite_directorr" EntitySet="favourite_directorr" />
+    </AssociationSet>
+    <AssociationSet Name="FK_favourite_moviee_Moviee" Association="Self.FK_favourite_moviee_Moviee">
+      <End Role="Moviee" EntitySet="Moviees" />
+      <End Role="favourite_moviee" EntitySet="favourite_moviee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_favourite_moviee_Userr" Association="Self.FK_favourite_moviee_Userr">
+      <End Role="Userr" EntitySet="Userrs" />
+      <End Role="favourite_moviee" EntitySet="favourite_moviee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Like_or_dislike_moviee_Moviee" Association="Self.FK_Like_or_dislike_moviee_Moviee">
+      <End Role="Moviee" EntitySet="Moviees" />
+      <End Role="Like_or_dislike_moviee" EntitySet="Like_or_dislike_moviee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Like_or_dislike_moviee_Userr" Association="Self.FK_Like_or_dislike_moviee_Userr">
+      <End Role="Userr" EntitySet="Userrs" />
+      <End Role="Like_or_dislike_moviee" EntitySet="Like_or_dislike_moviee" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

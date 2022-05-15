@@ -286,3 +286,7 @@ E:\IDMB3cpy\testtProject1\obj\Debug\testtProject1.csproj.CoreCompileInputs.cache
 E:\IDMB3cpy\testtProject1\obj\Debug\testtProject1.csproj.CopyComplete
 E:\IDMB3cpy\testtProject1\obj\Debug\testtProject1.dll
 E:\IDMB3cpy\testtProject1\obj\Debug\testtProject1.pdb
+C:\Users\DELL\OneDrive\Desktop\يارب\new-project\testtProject1\obj\Debug\testtProject1.csprojAssemblyReference.cache
+C:\Users\DELL\OneDrive\Desktop\يارب\new-project\testtProject1\obj\Debug\testtProject1.csproj.CoreCompileInputs.cache
+C:\Users\DELL\OneDrive\Desktop\يارب\new-project\testtProject1\obj\Debug\testtProject1.dll
+C:\Users\DELL\OneDrive\Desktop\يارب\new-project\testtProject1\obj\Debug\testtProject1.pdb
